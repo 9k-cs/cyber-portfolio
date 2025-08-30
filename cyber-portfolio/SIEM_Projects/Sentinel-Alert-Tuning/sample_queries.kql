@@ -1,0 +1,5 @@
+// Geo-impossible login (generic example)
+SigninLogs
+| summarize firstTime=min(TimeGenerated), lastTime=max(TimeGenerated) by UserPrincipalName, Location
+| where // pseudo-logic for distance/time impossible travel (implement with Entra ID logs & geo lookup)
+    1==1
